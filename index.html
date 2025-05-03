@@ -3,107 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIT-1101 Assignment 1 - PC Build</title>
+    <title>CIT-1101 Assignment 1 - PC Build - FM Kayes Al Mahi</title>
     <style>
+        /* Import a nice font (optional) */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: sans-serif;
-            line-height: 1.6;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+             font-family: 'Roboto', sans-serif; /* Using imported font */
+            line-height: 1.7;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            padding: 20px; /* Add padding around the body */
+            background-color: #eef2f7; /* Light blue-grey background */
+            color: #333; /* Default text color */
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .page {
-            background-color: #fff;
-            padding: 30px;
-            margin: 20px;
-            width: 80%;
-            max-width: 800px; /* A4-ish aspect ratio */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            min-height: 90vh; /* Approximate page height */
+            background-color: #ffffff; /* White page background */
+            padding: 40px; /* Increased padding */
+            margin-bottom: 30px; /* Space between pages */
+            width: 90%;
+            max-width: 850px;
+            box-shadow: 0 4px 15px rgba(0, 50, 100, 0.1); /* Softer shadow */
+            border-radius: 8px; /* Slightly rounded corners */
             box-sizing: border-box;
         }
 
         .title-page {
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 90vh; /* Fill page */
         }
 
-        .title-page h1, .title-page h2, .title-page h3 {
-            margin: 10px 0;
+        .title-page h1 {
+            color: #004488; /* Darker blue for main title */
+            font-size: 2em;
+             margin-bottom: 5px;
         }
-
-        .title-page .university-info {
-            margin-bottom: 40px;
-        }
-
-         .title-page .course-info {
-            margin-bottom: 40px;
-        }
-
-        .title-page .submitted-by, .title-page .submitted-to {
-            text-align: left;
-            margin: 20px auto; /* Center the blocks */
-            width: fit-content; /* Adjust width to content */
-        }
-
-         .title-page .submitted-by p, .title-page .submitted-to p {
-             margin: 5px 0;
+         .title-page h2 {
+             color: #0055aa; /* Medium blue */
+             font-size: 1.3em;
+             font-weight: normal;
+             margin-top: 0;
+             margin-bottom: 25px;
+         }
+         .title-page h3 {
+             color: #333;
+             font-size: 1.1em;
+             margin: 8px 0;
          }
 
-        .title-page .submission-date {
-            margin-top: 40px;
-            text-align: center; /* Center date */
+
+        .title-page .course-info {
+             border-top: 1px solid #ddd;
+             border-bottom: 1px solid #ddd;
+             padding: 20px 0;
+            margin: 30px 0;
+        }
+         .title-page .course-info h2 { /* Assignment Title */
+             font-size: 1.5em;
+             color: #004488;
+             font-weight: bold;
+             margin-bottom: 10px;
+         }
+
+         .submission-details {
+             display: flex;
+             justify-content: space-around; /* Space out blocks */
+             text-align: left;
+             margin-top: 40px;
+             flex-wrap: wrap; /* Allow wrapping on smaller screens */
+         }
+
+        .submitted-by, .submitted-to {
+             background-color: #f8f9fa; /* Light background for blocks */
+             padding: 15px 20px;
+             border-radius: 5px;
+             border: 1px solid #e0e0e0;
+             margin: 10px; /* Add margin for spacing */
+             min-width: 250px; /* Minimum width for blocks */
         }
 
+         .submitted-by p, .submitted-to p {
+             margin: 6px 0;
+             font-size: 0.95em;
+         }
+         .submitted-by strong, .submitted-to strong {
+             color: #0055aa;
+             display: block;
+             margin-bottom: 5px;
+             font-size: 1em;
+         }
+
+        .submission-date {
+             margin-top: 40px;
+             text-align: center;
+             font-weight: bold;
+             color: #555;
+        }
+
+        /* Content Page Styling */
         .content-page h2 {
-            margin-bottom: 20px;
+            color: #004488;
             text-align: center;
-            font-size: 1.4em;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+             border-bottom: 2px solid #0055aa;
+             padding-bottom: 10px;
         }
-         .content-page h3 {
-             font-size: 1.2em;
-             margin-top: 30px;
+        .content-page h3 { /* Section titles like Introduction, Configuration */
+             font-size: 1.3em;
+             color: #0055aa;
+             margin-top: 35px;
              margin-bottom: 15px;
+             border-bottom: 1px solid #eee;
+             padding-bottom: 5px;
          }
 
-        .content-page p {
-            margin-bottom: 15px;
+        .content-page p { /* Introduction paragraph */
+             margin-bottom: 20px;
+             text-align: justify; /* Justify text for a cleaner look */
         }
 
         .content-page ol {
-            padding-left: 20px;
+             padding-left: 0; /* Remove default padding */
+             list-style: none; /* Remove default numbering */
+             counter-reset: component-counter; /* Initialize counter */
         }
 
         .content-page li {
-            margin-bottom: 15px;
+             margin-bottom: 20px;
+             padding-left: 45px; /* Indent list items */
+             position: relative; /* Needed for pseudo-element positioning */
+             border-left: 3px solid #cce0ff; /* Add a left border */
+             padding-top: 5px;
+             padding-bottom: 5px;
+             background-color: #f8f9fc; /* Slight background tint */
+             border-radius: 4px;
         }
-         .content-page li strong {
-             display: block; /* Component name on its own line */
-             margin-bottom: 3px;
+         .content-page li::before { /* Custom numbering */
+             counter-increment: component-counter;
+             content: counter(component-counter);
+             position: absolute;
+             left: 10px;
+             top: 50%;
+             transform: translateY(-50%);
+             background-color: #0055aa; /* Blue background for number */
+             color: white;
+             font-weight: bold;
+             border-radius: 50%;
+             width: 25px;
+             height: 25px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 0.9em;
          }
-         .content-page li em { /* Style for the reason */
+
+         .content-page li strong { /* Component Name */
+             display: block;
+             color: #004488;
+             font-size: 1.05em;
+             margin-bottom: 5px;
+         }
+         .content-page li em { /* Reason text */
              font-style: normal;
-             color: #333;
+             color: #444; /* Slightly darker grey */
+             font-size: 0.95em;
          }
 
         /* Simple logo placeholder styling */
         .logo-placeholder {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #007bff;
+            width: 120px; /* Smaller logo */
+            height: 120px;
+            border: 3px solid #0055aa; /* Thicker border */
             border-radius: 50%;
-            margin: 20px auto;
+            margin: 20px auto 40px auto; /* Adjust margins */
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #555;
             text-align: center;
         }
@@ -111,17 +191,31 @@
         @media print {
             body {
                 background-color: #fff;
+                padding: 0;
             }
             .page {
                 box-shadow: none;
-                margin: 0;
+                margin: 0 auto;
                 width: 100%;
                 max-width: 100%;
-                min-height: 0;
-                page-break-after: always; /* Try to break pages */
+                border-radius: 0;
+                padding: 20px;
+                page-break-after: always;
             }
-            .title-page {
-                 height: auto; /* Adjust height for printing */
+             .submission-details {
+                 justify-content: space-between;
+             }
+             .submitted-by, .submitted-to {
+                 min-width: auto;
+                 margin: 5px 0;
+             }
+            .content-page li {
+                background-color: #fff; /* Remove background for print */
+                border-left: none; /* Remove border */
+                padding-left: 35px; /* Adjust padding */
+            }
+            .content-page li::before {
+                 left: 0; /* Adjust number position */
             }
         }
 
@@ -130,39 +224,36 @@
 <body>
 
     <div class="page title-page">
-        <div> <div class="logo-placeholder">(University Logo Placeholder)</div>
-            <div class="university-info">
-                <h1>NORTHERN UNIVERSITY BANGLADESH</h1>
-                <h2>DEPARTMENT OF [Your Department]</h2>
-            </div>
-            <div class="course-info">
-                <h3>COURSE TITLE: Introduction to Computers</h3>
-                <h3>COURSE CODE: (CIT-1101)</h3>
-                <h2>ASSIGNMENT: Assignment 1 - Build a PC (imaginary) according to your need</h2>
+        <div class="logo-placeholder">(University Logo)</div>
+        <div class="university-info">
+            <h1>NORTHERN UNIVERSITY BANGLADESH</h1>
+            <h2>DEPARTMENT OF [Your Department]</h2>
+        </div>
+        <div class="course-info">
+            <h3>COURSE TITLE: Introduction to Computers</h3>
+            <h3>COURSE CODE: (CIT-1101)</h3>
+            <h2>ASSIGNMENT: Assignment 1 - Build a PC (imaginary) according to your need</h2>
+        </div>
+
+        <div class="submission-details">
+             <div class="submitted-by">
+                <strong>SUBMITTED BY</strong>
+                <p>NAME: FM Kayes Al Mahi</p>
+                <p>STUDENT ID: [Your Student ID]</p> </div>
+             <div class="submitted-to">
+                <strong>SUBMITTED TO</strong>
+                <p>[Your Teacher's Full Name]</p> <p>[Your Teacher's Title]</p> <p>Department of Computer</p>
+                <p>Northern University Bangladesh</p>
             </div>
         </div>
 
-        <div> <div class="submitted-by">
-                <p><strong>SUBMITTED BY</strong></p>
-                <p>NAME: [Your Full Name]</p>
-                <p>STUDENT ID: [Your Student ID]</p>
-            </div>
-             <div class="submitted-to">
-                <p><strong>SUBMITTED TO</strong></p>
-                <p>[Your Teacher's Full Name]</p>
-                <p>[Your Teacher's Title]</p>
-                <p>Department of Computer</p>
-                <p>Northern University Bangladesh</p>
-            </div>
-             <div class="submission-date">
-                <p><strong>SUBMISSION DATE:</strong> [Date of Submission, e.g., 03/05/2025]</p>
-            </div>
+         <div class="submission-date">
+            <p>SUBMISSION DATE: May 3, 2025</p>
         </div>
     </div>
 
     <div class="page content-page">
-        <h2>Introduction to Computers (CIT 1101)</h2>
-        <h2>Assignment 1 - Build a PC (imaginary) according to your need</h2>
+        <h2>Assignment Details & PC Configuration</h2>
 
         <h3>Introduction</h3>
         <p>
@@ -218,5 +309,5 @@
         </ol>
     </div>
 
-    </body>
+</body>
 </html>
