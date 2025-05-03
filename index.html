@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT-1101 Assignment 1 - PC Build</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            width: 80%;
+            max-width: 800px; /* A4-ish aspect ratio */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            min-height: 90vh; /* Approximate page height */
+            box-sizing: border-box;
+        }
+
+        .title-page {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 90vh; /* Fill page */
+        }
+
+        .title-page h1, .title-page h2, .title-page h3 {
+            margin: 10px 0;
+        }
+
+        .title-page .university-info {
+            margin-bottom: 40px;
+        }
+
+         .title-page .course-info {
+            margin-bottom: 40px;
+        }
+
+        .title-page .submitted-by, .title-page .submitted-to {
+            text-align: left;
+            margin: 20px auto; /* Center the blocks */
+            width: fit-content; /* Adjust width to content */
+        }
+
+         .title-page .submitted-by p, .title-page .submitted-to p {
+             margin: 5px 0;
+         }
+
+        .title-page .submission-date {
+            margin-top: 40px;
+            text-align: center; /* Center date */
+        }
+
+        .content-page h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.4em;
+        }
+         .content-page h3 {
+             font-size: 1.2em;
+             margin-top: 30px;
+             margin-bottom: 15px;
+         }
+
+        .content-page p {
+            margin-bottom: 15px;
+        }
+
+        .content-page ol {
+            padding-left: 20px;
+        }
+
+        .content-page li {
+            margin-bottom: 15px;
+        }
+         .content-page li strong {
+             display: block; /* Component name on its own line */
+             margin-bottom: 3px;
+         }
+         .content-page li em { /* Style for the reason */
+             font-style: normal;
+             color: #333;
+         }
+
+        /* Simple logo placeholder styling */
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #007bff;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+                min-height: 0;
+                page-break-after: always; /* Try to break pages */
+            }
+            .title-page {
+                 height: auto; /* Adjust height for printing */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page title-page">
+        <div> <div class="logo-placeholder">(University Logo Placeholder)</div>
+            <div class="university-info">
+                <h1>NORTHERN UNIVERSITY BANGLADESH</h1>
+                <h2>DEPARTMENT OF [Your Department]</h2>
+            </div>
+            <div class="course-info">
+                <h3>COURSE TITLE: Introduction to Computers</h3>
+                <h3>COURSE CODE: (CIT-1101)</h3>
+                <h2>ASSIGNMENT: Assignment 1 - Build a PC (imaginary) according to your need</h2>
+            </div>
+        </div>
+
+        <div> <div class="submitted-by">
+                <p><strong>SUBMITTED BY</strong></p>
+                <p>NAME: [Your Full Name]</p>
+                <p>STUDENT ID: [Your Student ID]</p>
+            </div>
+             <div class="submitted-to">
+                <p><strong>SUBMITTED TO</strong></p>
+                <p>[Your Teacher's Full Name]</p>
+                <p>[Your Teacher's Title]</p>
+                <p>Department of Computer</p>
+                <p>Northern University Bangladesh</p>
+            </div>
+             <div class="submission-date">
+                <p><strong>SUBMISSION DATE:</strong> [Date of Submission, e.g., 03/05/2025]</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page content-page">
+        <h2>Introduction to Computers (CIT 1101)</h2>
+        <h2>Assignment 1 - Build a PC (imaginary) according to your need</h2>
+
+        <h3>Introduction</h3>
+        <p>
+            Building a personal computer (PC) allows for customization tailored to specific requirements and budget. This assignment details the component selection for a PC designed primarily for high-quality <strong>gaming and live streaming</strong>, capable of running demanding modern games smoothly while broadcasting gameplay online.
+        </p>
+
+        <h3>PC Configuration</h3>
+        <ol>
+            <li>
+                <strong>Processor (CPU): AMD Ryzen 7 5800X</strong>
+                <em>Reason: Excellent performance for simultaneous gaming and streaming tasks.</em>
+            </li>
+            <li>
+                <strong>Motherboard: ASUS ROG STRIX B550-F GAMING (or similar B550)</strong>
+                <em>Reason: Compatible with the CPU, provides necessary features and stable power for demanding use.</em>
+            </li>
+            <li>
+                <strong>Memory (RAM): 32GB (2x16GB) DDR4 3600MHz</strong>
+                <em>Reason: Ensures smooth multitasking between games, streaming software, and other applications.</em>
+            </li>
+            <li>
+                <strong>Storage: 1TB NVMe SSD (e.g., Crucial P5 Plus)</strong>
+                <em>Reason: Provides very fast boot and loading times for games and applications, with sufficient space.</em>
+            </li>
+            <li>
+                <strong>Graphics Card (GPU): NVIDIA GeForce RTX 4060 8GB</strong>
+                <em>Reason: Delivers strong gaming performance and features efficient hardware encoding (NVENC) ideal for high-quality streaming.</em>
+            </li>
+            <li>
+                <strong>Power Supply (PSU): 750W 80+ Gold Certified (e.g., Corsair RM750x)</strong>
+                <em>Reason: Provides stable, efficient power for all components with headroom for reliability.</em>
+            </li>
+             <li>
+                <strong>CPU Cooler: Noctua NH-U12S (or similar)</strong>
+                <em>Reason: Ensures CPU stays cool under load for stable performance during long sessions.</em>
+            </li>
+            <li>
+                <strong>Case: Mid-tower ATX case with good airflow (e.g., Fractal Design Meshify 2 Compact)</strong>
+                <em>Reason: Ensures components stay cool during long sessions and allows for easy building.</em>
+            </li>
+             <li>
+                <strong>Operating System: Windows 11 Home (64-bit)</strong>
+                <em>Reason: Modern OS supporting latest features and compatible with target software and games.</em>
+             </li>
+            <li>
+                <strong>Monitor: 27-inch 1440p 165Hz IPS Monitor</strong>
+                <em>Reason: High resolution and refresh rate provide a smooth and sharp visual experience ideal for gaming.</em>
+            </li>
+            <li>
+                <strong>Peripherals: Gaming Keyboard and High-Precision Mouse</strong>
+                <em>Reason: Input devices suitable for gaming accuracy and responsiveness.</em>
+            </li>
+        </ol>
+    </div>
+
+    </body>
+</html>
